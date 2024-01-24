@@ -21,7 +21,7 @@ assuming 100 snowflakes per foot
 1557 x 785 x 3.90625 x 100
 590 x 311 x 3.90625 x 100
 
-The average height is very close to 28, more specifically 27.9995537111765
+The average height is very close to 28m, more specifically 27.9995537111765
 '''
 from perlin_noise import PerlinNoise
 import random
@@ -129,7 +129,7 @@ mainWind = Vector(random.uniform(0, 2 * pi), 41.0667)
 # mainWind = Vector(random.uniform(0, 2 * pi), random.triangular(0, 41.0667, 13.56667))
 
 print("\nSimulating snow...")
-secondNum = 200
+secondNum = 3600 # one hour
 seconds = 0
 with alive_bar(secondNum) as bar:
     while seconds < secondNum:
