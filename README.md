@@ -1,0 +1,1 @@
+This is our snow simulation project. All the code is in the main part of the respository. The images used for the code are in the Images folder, and the snow data created from the simulation is under the data folder.
