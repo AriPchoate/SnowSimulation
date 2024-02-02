@@ -2,6 +2,7 @@
 Ari, Aureliano 
 Date: 2/2/24
 This code is used to convert the text file generated from the chunkMatrix in the simulation to a greyscale image.
+Also, the last lines of the code  create a histogram graph
 Sources: 
     cubic inch snow weight: https://evogov.s3.amazonaws.com/141/media/109213.pdf 
         - on average 1.25 pounds per cubic inch of snow
@@ -36,7 +37,7 @@ def generateFinalImg(data, img):
                 if val <= 1:
                     finalPix = 0
                 else:
-                    pix1 = avg**(math.log(127)/math.log(val))  #This part of the code is explained in (.jpeg) on git
+                    pix1 = avg**(math.log(127)/math.log(val))  #This part of the code is explained in pixelValConversionMath.jpeg on git
                     finalPix = int(254 - pix1)
                 color = (finalPix, finalPix, finalPix)  #Sets everything to same to make a black-white scale
                 x, y = smallSpot, spot
@@ -63,7 +64,7 @@ for line in data:  #Takes all unnecessary components out of the line
     numList.append(line)
 
 
-# generateFinalImg(numList, FinalImage)
+generateFinalImg(numList, FinalImage)
 
 highest = int(numList[0][0])
 lowest = int(numList[0][0])
